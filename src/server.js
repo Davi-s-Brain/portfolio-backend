@@ -1,8 +1,10 @@
 const express = require("express");
+const allRoutes = require("./tasks.routes");
 
 const app = express();
 
 app.use(express.json());
+app.use(allRoutes);
 
 app.get("/home", (req, res) => {
   return res.json("up");
